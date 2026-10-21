@@ -1,0 +1,27 @@
+1. Advanced Agentic RAG 
+2. Optimized Vision model  
+3. Voice transcript 
+4. Mood
+5. Scan Report Analyzer (Scanalyze)
+
+
+
+
+End-to-end application workflow
+1 Receive a question
+A user types a question, speaks into a microphone, or attaches a camera/image input.
+
+2 Normalize and validate
+The backend checks the request and converts voice or image input into context suitable for the agent.
+
+3 Retrieve medical context
+The agent searches the Pinecone vector index for relevant passages from the indexed medical book.
+
+Assess evidence coverage
+LangGraph routes to Tavily if the knowledge-base context is not adequate for the question.
+
+5 Generate grounded response
+The language model combines available evidence and conversation context, adding citations and uncertainty where needed.
+
+6 Present the result
+The interface displays the answer, source references, and optional speech playback.
