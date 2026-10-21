@@ -1,8 +1,21 @@
-1. Advanced Agentic RAG 
+Frontend : React Js 
+Backend :Django 
+
+1. Advanced Agentic RAG with corrective rag and self rag 
 2. Optimized Vision model  
 3. Voice transcript 
 4. Mood
 5. Scan Report Analyzer (Scanalyze)
+6. need a stop button to pause play and stop the voice 
+7. need a jwt authentication 
+
+
+
+UI Part 
+1. Scanalyze : left side description , right side uplaoded image 
+2 . multilingual
+3 . Remedy options (At Home remedy , prachin yug , ayurvedic)
+
 
 
 

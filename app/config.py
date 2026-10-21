@@ -24,8 +24,9 @@ class Settings(BaseSettings):
     chroma_collection: str = 'medical-agent-demo'  # reused as the Chroma collection name
     embed_model: str = 'sentence-transformers/all-MiniLM-L6-v2'
 
+
     chat_model: str = 'openai/gpt-oss-20b'
-    vision_model: str = 'gpt-4.1-mini'
+    vision_model: str = 'qwen/qwen3.8-27b'
     api_token: str = ''
     allowed_origins: str = 'http://localhost:8000,http://127.0.0.1:8082'
 
