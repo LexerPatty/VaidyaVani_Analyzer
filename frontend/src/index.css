@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import "tailwindcss";
 /* Global styles */
 :root {
@@ -34,6 +35,7 @@
 * {
   box-sizing: border-box;
 }
+
 
 html {
   min-width: 320px;
@@ -78,4 +80,8 @@ select {
 /* Internet Explorer / legacy Edge */
 * {
   -ms-overflow-style: none;
+}
+.special_heading {
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 2.5px;
 }

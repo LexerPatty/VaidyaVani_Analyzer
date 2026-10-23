@@ -28,6 +28,8 @@ import {
   House,
 } from "lucide-react";
 
+import logo from "../assets/logo_icon.png";
+
 const API_URL = "http://localhost:8000/extract_pres";
 const ACCEPTED_TYPES = ["application/pdf", "image/jpeg", "image/png", "image/webp"];
 
@@ -223,8 +225,8 @@ export default function PrescriptionAnalyzer() {
           <div className="flex items-center gap-3">
             
 
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-500/20">
-              <ScanLine size={21} />
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl transition-transform duration-300 hover:rotate-[-6deg] hover:scale-105">
+                <img src={logo} alt="Scanalyze Logo" className="h-full w-full object-contain" />
             </div>
 
             <div>

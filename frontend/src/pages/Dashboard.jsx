@@ -14,6 +14,9 @@ import {
   Activity,
 } from "lucide-react";
 
+
+import logo from "../assets/logo_icon.png";
+
 const features = [
   {
     title: "Mental Health",
@@ -27,6 +30,7 @@ const features = [
     tag: "WELLNESS",
     route: "/mental-health",
     number: "01",
+    fontfamily: "special_heading",
   },
   {
     title: "Prescription Analyzer",
@@ -37,7 +41,7 @@ const features = [
     iconColor: "text-sky-700",
     borderColor: "border-sky-200",
     accent: "bg-sky-500",
-    tag: "DOCUMENT AI",
+    tag: "DOCUMENT ANALYSIS",
     route: "/prescription-analyzer",
     number: "02",
   },
@@ -50,7 +54,7 @@ const features = [
     iconColor: "text-emerald-700",
     borderColor: "border-emerald-200",
     accent: "bg-emerald-500",
-    tag: "AI ASSISTANT",
+    tag: "YOUR ASSISTANT",
     route: "/gale",
     number: "03",
   },
@@ -63,7 +67,7 @@ const features = [
     iconColor: "text-amber-700",
     borderColor: "border-amber-200",
     accent: "bg-amber-500",
-    tag: "NUTRITION",
+    tag: "HEALTH AND NUTRITION",
     route: "/diet-ai",
     number: "04",
   },
@@ -103,16 +107,16 @@ export default function Dashboard() {
         {/* Top identity row - no navbar */}
         <header className="mb-10 flex items-center justify-between gap-4 sm:mb-14">
           <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/20 transition-transform duration-300 hover:rotate-[-6deg] hover:scale-105">
-              <ScanLine size={23} />
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl transition-transform duration-300 hover:rotate-[-6deg] hover:scale-105">
+              <img src={logo} alt="Scanalyze Logo" className="h-full w-full object-contain" />
             </div>
 
             <div className="min-w-0">
               <h1 className="text-xl font-extrabold tracking-tight sm:text-2xl">
-                Scanalyze<span className="text-blue-600"></span>
+                VaidyaVani<span className="text-blue-600">.AI</span>
               </h1>
               <p className="hidden text-[10px] font-semibold tracking-[0.18em] text-slate-400 sm:block">
-                ADVANCED VAIDYAVANI ANALYZER
+                ADVANCED VAIDYAVANI SOLUTIONS
               </p>
             </div>
           </div>
@@ -122,7 +126,7 @@ export default function Dashboard() {
               <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400">
                 Signed in as
               </p>
-              <p className="mt-1 max-w-40 truncate text-sm font-bold text-slate-700">
+              <p className="mt-1 max-w-40 truncate text-sm font-bold text-slate-700 tracking-[0.2em]">
                 {user?.name || "User"}
               </p>
             </div>
@@ -150,14 +154,14 @@ export default function Dashboard() {
             Your health workspace
           </div> */}
 
-          <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          <h2 className="text-5xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl special_heading">
             Hello,{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {(user?.name || "there").split(" ")[0]}
             </span>
           </h2>
 
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base tracking-[0.03em]">
             Your personal healthcare tools, powered by AI. Choose a workspace
             to get started.
           </p>
@@ -167,7 +171,7 @@ export default function Dashboard() {
         <section aria-label="Healthcare tools">
           <div className="mb-5 flex items-center justify-between">
             <h3 className="text-sm font-bold text-slate-800 sm:text-base">
-              Available modules
+              Available Modules
             </h3>
             <span className="font-mono text-xs text-slate-400">
               05 MODULES
@@ -210,21 +214,21 @@ export default function Dashboard() {
                       {feature.tag}
                     </p>
 
-                    <h4 className="text-lg font-bold tracking-tight text-slate-800 sm:text-xl">
+                    <h4 className="text-2xl font-bold tracking-tight text-slate-800 sm:text-3xl special_heading">
                       {feature.title}
                     </h4>
 
-                    <p className="mt-2 max-w-sm text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6">
+                    <p className="mt-2 max-w-sm text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 tracking-[0.01em]">
                       {feature.description}
                     </p>
                   </div>
 
                   <div className="relative mt-4 flex items-center justify-between border-t border-black/[0.06] pt-3">
-                    <span className="text-xs font-semibold text-slate-600 transition-colors group-hover:text-slate-900">
-                      Open module
+                    <span className="text-xs font-semibold text-slate-700 transition-colors group-hover:text-slate-900 tracking-[0.1rem]">
+                      Open Module
                     </span>
 
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-slate-600 shadow-sm transition-all duration-300 group-hover:translate-x-1 group-hover:bg-slate-900 group-hover:text-white">
+                    <span className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/80 text-slate-600 shadow-sm transition-all duration-300 group-hover:translate-x-1 group-hover:bg-slate-900 group-hover:text-white">
                       <ArrowUpRight size={17} />
                     </span>
                   </div>
