@@ -4,6 +4,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import PrescriptionAnalyzer from "./pages/PrescriptionAnalyzer";
 
 // Logged-in users shouldn't see login/register
 function PublicRoute({ children }) {
@@ -40,6 +41,11 @@ export default function App() {
                 <Dashboard />
               </ProtectedRoute>
             }
+          />
+
+          <Route
+            path="/prescription-analyzer"
+            element={<PrescriptionAnalyzer/>}
           />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>

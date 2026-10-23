@@ -13,8 +13,11 @@ from app.config import settings
 from app.agent import graph
 import edge_tts
 
+
+
 ROOT=Path(__file__).resolve().parent.parent
 app=FastAPI(title='Medical Agent Educational API',version='1.0.0')
+
 app.add_middleware(CORSMiddleware,allow_origins=settings.allowed_origins.split(','),allow_credentials=False,allow_methods=['GET','POST'],allow_headers=['Authorization','Content-Type'])
 app.mount('/static',StaticFiles(directory=ROOT/'static'),name='static')
 
@@ -133,3 +136,6 @@ async def speak(payload:dict,authorization:str|None=Header(default=None)):
     except Exception as exc:
         print('Speak error:',repr(exc),flush=True)
         raise HTTPException(502,'Speech synthesis unavailable')
+
+
+
